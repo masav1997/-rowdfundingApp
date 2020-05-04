@@ -9,7 +9,7 @@ import ProfilePage from './screens/ProfilePage';
 import Profile from './screens/Profile';
 import ProfileEdit from './screens/ProfileEdit';
 import Settings from './screens/Settings';
-
+import Balance from './screens/Balance';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -104,14 +104,14 @@ export default class App extends React.Component {
 										backgroundColor: '#FFFFFF',
 										position: 'absolute',
 										bottom: -1,
-                    padding: 5,
+										padding: 5,
 										height: '9.5%',
 										zIndex: 8,
 										borderTopColor: '#BBC5D0',
 										borderTopWidth: 1,
 									},
 									activeTintColor: '#5238F2',
-                  inactiveTintColor: '#BBC5D0',
+									inactiveTintColor: '#BBC5D0',
 								}}
 							>
 								<Tab.Screen name="Messages" component={Messages} />
@@ -119,9 +119,10 @@ export default class App extends React.Component {
 							</Tab.Navigator>
 						)}
 					</Stack.Screen>
-          <Stack.Screen name="ProfilePage" component={ProfilePage} />
-          <Stack.Screen name="ProfileEdit" component={ProfileEdit} />
-		  <Stack.Screen name="Settings" component={Settings} />
+					<Stack.Screen name="ProfilePage" component={ProfilePage} />
+					<Stack.Screen name="ProfileEdit" component={ProfileEdit} />
+					<Stack.Screen name="Settings" component={Settings} />
+					<Stack.Screen name="Balance" component={Balance} />
 				</Stack.Navigator>
 			</NavigationContainer>
 		);
