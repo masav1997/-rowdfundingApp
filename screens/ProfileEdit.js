@@ -32,6 +32,7 @@ export default class ProfileEdit extends React.Component {
 				>
 					<TouchableOpacity
 						style={{ marginTop: '5%', flex: 1, alignSelf: 'flex-end', justifyContent: 'center' }}
+						onPress={() => this.props.navigation.goBack()}
 					>
 						<Image
 							source={require('../assets/icons/back_icon.png')}

@@ -8,6 +8,7 @@ import Messages from './screens/Messages';
 import ProfilePage from './screens/ProfilePage';
 import Profile from './screens/Profile';
 import ProfileEdit from './screens/ProfileEdit';
+import Settings from './screens/Settings';
 
 
 const Stack = createStackNavigator();
@@ -120,6 +121,7 @@ export default class App extends React.Component {
 					</Stack.Screen>
           <Stack.Screen name="ProfilePage" component={ProfilePage} />
           <Stack.Screen name="ProfileEdit" component={ProfileEdit} />
+		  <Stack.Screen name="Settings" component={Settings} />
 				</Stack.Navigator>
 			</NavigationContainer>
 		);

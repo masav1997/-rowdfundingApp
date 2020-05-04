@@ -40,6 +40,7 @@ export default class ProfilePage extends React.Component {
 					<SafeAreaView style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
 						<TouchableOpacity
 							style={{ marginTop: '5%', flex: 1, alignSelf: 'flex-start', justifyContent: 'center' }}
+							onPress={() => this.props.navigation.goBack()}
 						>
 							<Image
 								source={require('../assets/icons/back_icon.png')}
