@@ -924,6 +924,13 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@dooboo-ui/native-accordion@^0.4.5":
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/@dooboo-ui/native-accordion/-/native-accordion-0.4.5.tgz#f57404ded5b9e4b8bb196fcca74a28bd2251579d"
+  integrity sha512-Kma/Lpa444R3QbRddBQEvOlvvveFHk8B/ccXU6jruN+HaxmGXHQBECBLHUIMQK9taK9cmnNN/T96m3VRf1awVQ==
+  dependencies:
+    dooboolab-welcome "^1.1.1"
+
 "@egjs/hammerjs@^2.0.17":
   version "2.0.17"
   resolved "https://registry.yarnpkg.com/@egjs/hammerjs/-/hammerjs-2.0.17.tgz#5dc02af75a6a06e4c2db0202cae38c9263895124"
@@ -1132,6 +1139,24 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/masked-view/-/masked-view-0.1.6.tgz#c7f2ac187c1f25aa8c30d11baa8f4398eca3bb84"
   integrity sha512-PpMoeXwPUoldCRKDuSi+zK5rT+sJTW6ri6RdGPkSKRzU77Q1d9IaR0O5IKvBj0XSdL3p+dcOa05gk35aGDffBQ==
 
+"@react-native-community/viewpager@^1.1.7":
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/@react-native-community/viewpager/-/viewpager-1.1.7.tgz#7d3b1631f1ec91145db92a8e25c80d53027e96ba"
+  integrity sha512-k9v2KJtAprNPq7IZmedD2VLMePvPW+ohX3uDnkpoKritBji+/RtRmTKrdtPi3Uvp0toq/KtPttAds1dr7AZNpw==
+
+"@react-native-community/viewpager@^2.0.1":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@react-native-community/viewpager/-/viewpager-2.0.2.tgz#622b190294b1310c4825c98daeaee1c8443f7124"
+  integrity sha512-CKVhIZdX/Cmb80muog8sKpi5vM8npwFp4tx4Dj1IvTBidZweuO22+VH2rDOj7E0LzdV9IYRJ4FGBwcPBD2qUrQ==
+
+"@react-navigation/bottom-tabs@^5.3.3":
+  version "5.3.4"
+  resolved "https://registry.yarnpkg.com/@react-navigation/bottom-tabs/-/bottom-tabs-5.3.4.tgz#6a8c642eab35f7d37ca084361099558e5b058763"
+  integrity sha512-A+qfwlNsgrSxyTVvcywMRkj+h/6GHgeBlomlLu3NP1sx/ZFSAPUmDLB/0MQDbfgtqEh9dkS+BhqQTMnryWh90g==
+  dependencies:
+    color "^3.1.2"
+    react-native-iphone-x-helper "^1.2.1"
+
 "@react-navigation/core@^5.4.0":
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-5.4.0.tgz#6b4973d48396d28ed3efee582b28807682a5865d"
@@ -1143,6 +1168,13 @@
     query-string "^6.12.0"
     react-is "^16.13.0"
     use-subscription "^1.4.0"
+
+"@react-navigation/material-top-tabs@^5.1.14":
+  version "5.1.15"
+  resolved "https://registry.yarnpkg.com/@react-navigation/material-top-tabs/-/material-top-tabs-5.1.15.tgz#bf7bb379840036983b6ecf70266cb1b755a8671f"
+  integrity sha512-x/xF7qFJG9GYYJ92nttsIpj1fs2JisYsSLAJDo7DI19/NNHDPGoEZMlctW+nMuGzOVx0ZNu3HHnY00dztMrx/A==
+  dependencies:
+    color "^3.1.2"
 
 "@react-navigation/native@^5.2.3":
   version "5.2.3"
@@ -2168,6 +2200,11 @@ didyoumean@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/didyoumean/-/didyoumean-1.2.1.tgz#e92edfdada6537d484d73c0172fd1eba0c4976ff"
   integrity sha1-6S7f2tplN9SE1zwBcv0eugxJdv8=
+
+dooboolab-welcome@^1.1.1:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/dooboolab-welcome/-/dooboolab-welcome-1.2.0.tgz#295818ce85a8e97dc90c0ec0510b4008e2d722dc"
+  integrity sha512-XgEbjJHAsKLge/e8jtuHsv84Ovg1Gx0GvnOTOmOlVGV1643nduTAkT3fyo/mxKbzvyXBr47RHaJAY4R2toI0UA==
 
 ee-first@1.1.1:
   version "1.1.1"
@@ -4333,6 +4370,13 @@ react-is@^16.12.0, react-is@^16.13.0, react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-native-animatable@1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.3.3.tgz#a13a4af8258e3bb14d0a9d839917e9bb9274ec8a"
+  integrity sha512-2ckIxZQAsvWn25Ho+DK3d1mXIgj7tITkrS4pYDvx96WyOttSvzzFeQnM2od0+FUMzILbdHDsDEqZvnz1DYNQ1w==
+  dependencies:
+    prop-types "^15.7.2"
+
 react-native-gesture-handler@~1.6.0:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.6.1.tgz#678e2dce250ed66e93af409759be22cd6375dd17"
@@ -4347,6 +4391,14 @@ react-native-iphone-x-helper@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
   integrity sha512-/VbpIEp8tSNNHIvstuA3Swx610whci1Zpc9mqNkqn14DkMbw+ORviln2u0XyHG1kPvvwTNGZY6QpeFwxYaSdbQ==
+
+react-native-modal@^11.5.6:
+  version "11.5.6"
+  resolved "https://registry.yarnpkg.com/react-native-modal/-/react-native-modal-11.5.6.tgz#bb25a78c35a5e24f45de060e5f64284397d38a87"
+  integrity sha512-APGNfbvgC4hXbJqcSADu79GLoMKIHUmgR3fDQ7rCGZNBypkStSP8imZ4PKK/OzIZZfjGU9aP49jhMgGbhY9KHA==
+  dependencies:
+    prop-types "^15.6.2"
+    react-native-animatable "1.3.3"
 
 react-native-reanimated@~1.7.0:
   version "1.7.1"
@@ -4367,10 +4419,42 @@ react-native-screens@~2.2.0:
   dependencies:
     debounce "^1.2.0"
 
+react-native-scrollable-tab-view-forked@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/react-native-scrollable-tab-view-forked/-/react-native-scrollable-tab-view-forked-1.0.9.tgz#2392dbf0b24e6c98facbf21d4f6018da3d096cbd"
+  integrity sha512-2ooUJeASM/hNL+9cfk4lH9OdtlHqU/E4I8y5J1Xed+WGpErqFxbEpe9sVwp3vTO9olisfmcyvDmCDvWEMh9dhg==
+  dependencies:
+    "@react-native-community/viewpager" "^1.1.7"
+    create-react-class "^15.6.2"
+    prop-types "^15.6.0"
+    react-timer-mixin "^0.13.3"
+
+react-native-scrollable-tab-view@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-scrollable-tab-view/-/react-native-scrollable-tab-view-1.0.0.tgz#87319896067f7bb643ecd7fba2cba4d6d8f9e18b"
+  integrity sha512-lpZ9xz+PBdgSzpk93VjCIfxV0zvJDX9iEUP8ImDg3p1QJGHOWbWyfDx+lcx5VCDVrrdZdtuVAAdc0tkYXZyQDw==
+  dependencies:
+    "@react-native-community/viewpager" "^2.0.1"
+    create-react-class "^15.6.2"
+    prop-types "^15.6.0"
+    react-timer-mixin "^0.13.3"
+
+react-native-tab-view@^2.14.0:
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-2.14.0.tgz#dd801f82fdb8e92fce9688b78d13923f3a5a2b3f"
+  integrity sha512-Z7XAM3NsMB96c17e9EAveunk7SUgilXWwVUTmWI1u/+p2SeOMUOB87z+//UXrcVlD1e9BPweR73q7dq7krTzTg==
+
 react-native-view-shot@3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/react-native-view-shot/-/react-native-view-shot-3.1.2.tgz#8c8e84c67a4bc8b603e697dbbd59dbc9b4f84825"
   integrity sha512-9u9fPtp6a52UMoZ/UCPrCjKZk8tnkI9To0Eh6yYnLKFEGkRZ7Chm6DqwDJbYJHeZrheCCopaD5oEOnRqhF4L2Q==
+
+react-native-web-swiper@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-web-swiper/-/react-native-web-swiper-2.1.0.tgz#5b321819ee17ff1f7bc4ffd89388acf24b7b7fb7"
+  integrity sha512-TzHJIoHLEps03XFZp+8CLpvBbKxjIzqymaQeVemsNdGCqpVSMyCV7VN+2Yq3PZOGL49w5F0iynp80yGrDa7REA==
+  dependencies:
+    prop-types "^15.6.2"
 
 react-native-web@~0.11.7:
   version "0.11.7"
@@ -4427,7 +4511,7 @@ react-refresh@^0.4.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.4.2.tgz#54a277a6caaac2803d88f1d6f13c1dcfbd81e334"
   integrity sha512-kv5QlFFSZWo7OlJFNYbxRtY66JImuP2LcrFgyJfQaf85gSP+byzG21UbDQEYjU7f//ny8rwiEkO6py2Y+fEgAQ==
 
-react-timer-mixin@^0.13.4:
+react-timer-mixin@^0.13.3, react-timer-mixin@^0.13.4:
   version "0.13.4"
   resolved "https://registry.yarnpkg.com/react-timer-mixin/-/react-timer-mixin-0.13.4.tgz#75a00c3c94c13abe29b43d63b4c65a88fc8264d3"
   integrity sha512-4+ow23tp/Tv7hBM5Az5/Be/eKKF7DIvJ09voz5LyHGQaqqz9WV8YMs31eFvcYQs7d451LSg7kDJV70XYN/Ug/Q==
