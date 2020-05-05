@@ -10,6 +10,7 @@ import Profile from './screens/Profile';
 import ProfileEdit from './screens/ProfileEdit';
 import Settings from './screens/Settings';
 import Balance from './screens/Balance';
+import MyProjects from './screens/MyProjects';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -84,7 +85,7 @@ export default class App extends React.Component {
 												? require('./assets/icons/messages_active.png')
 												: require('./assets/icons/messages.png');
 											style = { width: 25, height: 25 };
-										} else if (route.name === 'Messages') {
+										} else if (route.name === 'MyProjects') {
 											iconName = focused
 												? require('./assets/icons/my_projects_active.png')
 												: require('./assets/icons/my_projects.png');
@@ -115,6 +116,7 @@ export default class App extends React.Component {
 								}}
 							>
 								<Tab.Screen name="Messages" component={Messages} />
+								<Tab.Screen name="MyProjects" component={MyProjects} />
 								<Tab.Screen name="Profile" component={Profile} />
 							</Tab.Navigator>
 						)}

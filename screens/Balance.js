@@ -1001,8 +1001,8 @@ export default class Balance extends React.Component {
 										style={{
 											fontSize: 16,
 											color: '#0C0D0B',
-											fontWeight: '500',
-											textAlign: 'normal',
+											fontWeight: 'normal',
+											textAlign: 'center',
 											alignSelf: 'center',
 											marginLeft: 10,
 										}}
@@ -1508,8 +1508,8 @@ export default class Balance extends React.Component {
 										style={{
 											fontSize: 16,
 											color: '#0C0D0B',
-											fontWeight: '500',
-											textAlign: 'normal',
+											fontWeight: 'normal',
+											textAlign: 'center',
 											alignSelf: 'center',
 											marginLeft: 10,
 										}}
