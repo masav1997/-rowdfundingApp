@@ -151,7 +151,9 @@ export default class ProfilePage extends React.Component {
 									Все проекты
 								</Text>
 							</View>
-							<TouchableOpacity style={{ flex: 1, justifyContent: 'flex-end', flexDirection: 'row' }}>
+							<TouchableOpacity style={{ flex: 1, justifyContent: 'flex-end', flexDirection: 'row' }} onPress={() => {
+								this.props.navigation.navigate('UserProjects');
+							}}>
 								<Text
 									style={{
 										fontSize: 13,

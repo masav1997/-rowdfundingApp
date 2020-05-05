@@ -213,7 +213,9 @@ export default class Profile extends React.Component {
 							</Text>
 						</TouchableOpacity>
 
-						<TouchableOpacity style={{ flexDirection: 'row', width: '100%', marginBottom: 30 }}>
+						<TouchableOpacity style={{ flexDirection: 'row', width: '100%', marginBottom: 30 }} onPress={() => {
+								this.props.navigation.navigate('ProfilePage');
+							}}>
 							<Image
 								source={require('../assets/icons/about.png')}
 								style={{ width: 25, height: 25, alignSelf: 'center' }}

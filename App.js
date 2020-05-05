@@ -10,6 +10,7 @@ import Profile from './screens/Profile';
 import ProfileEdit from './screens/ProfileEdit';
 import Settings from './screens/Settings';
 import Balance from './screens/Balance';
+import UserProjects from './screens/UserProjects';
 import MyProjects from './screens/MyProjects';
 
 const Stack = createStackNavigator();
@@ -125,6 +126,7 @@ export default class App extends React.Component {
 					<Stack.Screen name="ProfileEdit" component={ProfileEdit} />
 					<Stack.Screen name="Settings" component={Settings} />
 					<Stack.Screen name="Balance" component={Balance} />
+					<Stack.Screen name="UserProjects" component={UserProjects} />
 				</Stack.Navigator>
 			</NavigationContainer>
 		);
