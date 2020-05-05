@@ -12,6 +12,9 @@ import Settings from './screens/Settings';
 import Balance from './screens/Balance';
 import UserProjects from './screens/UserProjects';
 import MyProjects from './screens/MyProjects';
+import AllProjects from './screens/AllProjects';
+import Favorites from './screens/Favorites';
+import Search from './screens/Search';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -71,27 +74,27 @@ export default class App extends React.Component {
 										let iconName;
 										let style;
 
-										if (route.name === 'Messages') {
+										if (route.name === 'Все проекты') {
 											iconName = focused
 												? require('./assets/icons/all_projects_active.png')
 												: require('./assets/icons/all_projects.png');
 											style = { width: 25, height: 25 };
-										} else if (route.name === 'Messages') {
+										} else if (route.name === 'Избранное') {
 											iconName = focused
 												? require('./assets/icons/favorites_active.png')
 												: require('./assets/icons/favorites.png');
 											style = { width: 25, height: 25 };
-										} else if (route.name === 'Messages') {
+										} else if (route.name === 'Сообщения') {
 											iconName = focused
 												? require('./assets/icons/messages_active.png')
 												: require('./assets/icons/messages.png');
 											style = { width: 25, height: 25 };
-										} else if (route.name === 'MyProjects') {
+										} else if (route.name === 'Мои проекты') {
 											iconName = focused
 												? require('./assets/icons/my_projects_active.png')
 												: require('./assets/icons/my_projects.png');
 											style = { width: 25, height: 25 };
-										} else if (route.name === 'Profile') {
+										} else if (route.name === 'Профиль') {
 											iconName = focused
 												? require('./assets/icons/profile_active.png')
 												: require('./assets/icons/profile.png');
@@ -107,18 +110,24 @@ export default class App extends React.Component {
 										position: 'absolute',
 										bottom: -1,
 										padding: 5,
-										height: '9.5%',
+										height: Platform.OS === 'android' ? '7.5%' : '9.5%',
 										zIndex: 8,
 										borderTopColor: '#BBC5D0',
 										borderTopWidth: 1,
 									},
 									activeTintColor: '#5238F2',
 									inactiveTintColor: '#BBC5D0',
+									labelStyle: {
+										fontSize: 9,
+										bottom: '15%'
+									  },
 								}}
 							>
-								<Tab.Screen name="Messages" component={Messages} />
-								<Tab.Screen name="MyProjects" component={MyProjects} />
-								<Tab.Screen name="Profile" component={Profile} />
+								<Tab.Screen name="Все проекты" component={AllProjects}/>
+								<Tab.Screen name="Избранное" component={Favorites}/>
+								<Tab.Screen name="Сообщения" component={Messages} />
+								<Tab.Screen name="Мои проекты" component={MyProjects} />
+								<Tab.Screen name="Профиль" component={Profile} />
 							</Tab.Navigator>
 						)}
 					</Stack.Screen>
@@ -127,6 +136,7 @@ export default class App extends React.Component {
 					<Stack.Screen name="Settings" component={Settings} />
 					<Stack.Screen name="Balance" component={Balance} />
 					<Stack.Screen name="UserProjects" component={UserProjects} />
+					<Stack.Screen name="Search" component={Search} />
 				</Stack.Navigator>
 			</NavigationContainer>
 		);
