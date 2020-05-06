@@ -15,6 +15,8 @@ import MyProjects from './screens/MyProjects';
 import AllProjects from './screens/AllProjects';
 import Favorites from './screens/Favorites';
 import Search from './screens/Search';
+import Project from './screens/Project';
+import Comments from './screens/Comments';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -137,6 +139,8 @@ export default class App extends React.Component {
 					<Stack.Screen name="Balance" component={Balance} />
 					<Stack.Screen name="UserProjects" component={UserProjects} />
 					<Stack.Screen name="Search" component={Search} />
+					<Stack.Screen name="Project" component={Project} />
+					<Stack.Screen name="Comments" component={Comments} />
 				</Stack.Navigator>
 			</NavigationContainer>
 		);

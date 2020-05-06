@@ -28,7 +28,7 @@ export default class Popular extends React.Component {
 			<View style={{ height: '100%', backgroundColor: 'white' }}>
 				<StatusBar barStyle="light-content" />
 				<ScrollView style={{ paddingRight: 15, paddingLeft: 15 }} showsVerticalScrollIndicator={false}>
-					<View
+					<TouchableOpacity
 						style={{
 							width: width - 30,
 							height: 'auto',
@@ -39,6 +39,7 @@ export default class Popular extends React.Component {
 							marginTop: 15,
 							marginBottom: -10,
 						}}
+						onPress={this.props.onPress}
 					>
 						<Image
 							source={require('../assets/icons/pic6.png')}
@@ -229,7 +230,7 @@ export default class Popular extends React.Component {
 								</Text>
 							</TouchableOpacity>
 						</ScrollView>
-					</View>
+					</TouchableOpacity>
 					<View
 						style={{
 							width: width - 30,

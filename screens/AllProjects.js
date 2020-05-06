@@ -149,10 +149,14 @@ export default class AllProjects extends React.Component {
 					tabBarUnderlineStyle={styles.underlineStyle}
 					tabBarTextStyle={{ fontSize: 17, fontWeight: '500' }}
 				>
-					<Popular key={'1'} tabLabel={'Популярные'} />
-					<Popular key={'2'} tabLabel={'Новые'} />
-					<Popular key={'3'} tabLabel={'Вещи'} />
-					<Popular key={'4'} tabLabel={'Мода'} />
+					<Popular
+						key={'1'}
+						tabLabel={'Популярные'}
+						onPress={() => this.props.navigation.navigate('Project')}
+					/>
+					<Popular key={'2'} tabLabel={'Новые'} onPress={() => this.props.navigation.navigate('Project')} />
+					<Popular key={'3'} tabLabel={'Вещи'} onPress={() => this.props.navigation.navigate('Project')} />
+					<Popular key={'4'} tabLabel={'Мода'} onPress={() => this.props.navigation.navigate('Project')} />
 				</ScrollableTabView>
 				<Modal
 					isVisible={this.state.isModalVisible}
