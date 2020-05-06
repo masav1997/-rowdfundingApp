@@ -17,6 +17,10 @@ import Favorites from './screens/Favorites';
 import Search from './screens/Search';
 import Project from './screens/Project';
 import Comments from './screens/Comments';
+import CreateTopic from './screens/CreateTopic';
+import Topic from './screens/Topic';
+import CreateComment from './screens/CreateComment';
+import CreateProject from './screens/CreateProject';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -35,6 +39,34 @@ const images = [
 	require('./assets/icons/my_projects_active.png'),
 	require('./assets/icons/profile.png'),
 	require('./assets/icons/profile_active.png'),
+	require('./assets/icons/del.png'),
+	require('./assets/icons/done.png'),
+	require('./assets/icons/drop.png'),
+	require('./assets/icons/drop1.png'),
+	require('./assets/icons/edit.png'),
+	require('./assets/icons/filter.png'),
+	require('./assets/icons/hashtag.png'),
+	require('./assets/icons/img.png'),
+	require('./assets/icons/img1.png'),
+	require('./assets/icons/invoice.png'),
+	require('./assets/icons/mastercard.png'),
+	require('./assets/icons/pic1.png'),
+	require('./assets/icons/pic10.png'),
+	require('./assets/icons/pic2.png'),
+	require('./assets/icons/pic3.png'),
+	require('./assets/icons/pic4.png'),
+	require('./assets/icons/pic5.png'),
+	require('./assets/icons/pic6.png'),
+	require('./assets/icons/pic7.png'),
+	require('./assets/icons/pic8.png'),
+	require('./assets/icons/pic9.png'),
+	require('./assets/icons/play.png'),
+	require('./assets/icons/right.png'),
+	require('./assets/icons/search.png'),
+	require('./assets/icons/settings.png'),
+	require('./assets/icons/share.png'),
+	require('./assets/icons/uknow.png'),
+	require('./assets/icons/visa.png'),
 ];
 
 export default class App extends React.Component {
@@ -121,7 +153,7 @@ export default class App extends React.Component {
 									inactiveTintColor: '#BBC5D0',
 									labelStyle: {
 										fontSize: 9,
-										bottom: '15%'
+										bottom: '10%'
 									  },
 								}}
 							>
@@ -141,6 +173,10 @@ export default class App extends React.Component {
 					<Stack.Screen name="Search" component={Search} />
 					<Stack.Screen name="Project" component={Project} />
 					<Stack.Screen name="Comments" component={Comments} />
+					<Stack.Screen name="CreateTopic" component={CreateTopic} />
+					<Stack.Screen name="Topic" component={Topic} />
+					<Stack.Screen name="CreateComment" component={CreateComment} />
+					<Stack.Screen name="CreateProject" component={CreateProject} />
 				</Stack.Navigator>
 			</NavigationContainer>
 		);

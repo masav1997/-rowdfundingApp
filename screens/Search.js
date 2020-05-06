@@ -87,7 +87,7 @@ export default class Search extends React.Component {
 						marginBottom: 15,
 					}}
 				>
-					<TouchableOpacity style={{ flex: 1 }} onPress={() => this.props.navigation.goBack()}>
+					<TouchableOpacity style={{ flex: 1, height: '100%', width: '100%', justifyContent: 'center' }} onPress={() => this.props.navigation.goBack()}>
 						<Image style={{ width: 21, height: 21 }} source={require('../assets/icons/right.png')} />
 					</TouchableOpacity>
 					<View style={{ flex: 11 }}>
@@ -154,6 +154,9 @@ export default class Search extends React.Component {
 							borderColor: '#EFF4FC',
 							borderRadius: 10,
 							marginBottom: 10,
+						}}
+						onPress={() => {
+							this.props.navigation.navigate('Project');
 						}}
 					>
 						<View style={{ flexDirection: 'row', width: width - 30, paddingRight: 25 }}>

@@ -926,7 +926,7 @@ export default class Project extends React.Component {
 								flex: 1,
 							}}
 						>
-							Вывод средств
+							Пожертвование
 						</Text>
 					</View>
 					<ScrollView showsHorizontalScrollIndicator={false} horizontal={true}>
@@ -1204,7 +1204,7 @@ export default class Project extends React.Component {
 								flex: 1,
 							}}
 						>
-							Куда вывести
+							Способ оплаты
 						</Text>
 					</View>
 
@@ -1393,7 +1393,7 @@ export default class Project extends React.Component {
 									textAlign: 'center',
 								}}
 							>
-								Вывести
+								Пожертвовать
 							</Text>
 						</TouchableOpacity>
 					</View>

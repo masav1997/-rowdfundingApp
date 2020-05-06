@@ -40,7 +40,9 @@ export default class MyProjects extends React.Component {
 					</View>
 					<TouchableOpacity
 						style={{ marginTop: '5%', flex: 1, alignSelf: 'flex-end', justifyContent: 'center' }}
-						onPress={() => this.props.navigation.goBack()}
+						onPress={() => {
+							this.props.navigation.navigate('CreateProject');
+						}}
 					>
 						<Image
 							source={require('../assets/icons/add_icon.png')}
@@ -49,7 +51,7 @@ export default class MyProjects extends React.Component {
 					</TouchableOpacity>
 				</View>
 				<ScrollView style={{ paddingRight: 15, paddingLeft: 15 }} showsVerticalScrollIndicator={false}>
-					<View
+					<TouchableOpacity
 						style={{
 							width: width - 30,
 							height: 'auto',
@@ -59,6 +61,9 @@ export default class MyProjects extends React.Component {
 							borderRadius: 10,
 							marginTop: 15,
 							marginBottom: -10,
+						}}
+						onPress={() => {
+							this.props.navigation.navigate('Project');
 						}}
 					>
 						<View style={{ flexDirection: 'row', width: width - 30, paddingRight: 25 }}>
@@ -183,8 +188,8 @@ export default class MyProjects extends React.Component {
 								</View>
 							</View>
 						</View>
-					</View>
-					<View
+					</TouchableOpacity>
+					<TouchableOpacity
 						style={{
 							width: width - 30,
 							height: 'auto',
@@ -194,6 +199,9 @@ export default class MyProjects extends React.Component {
 							borderRadius: 10,
 							marginTop: 15,
 							marginBottom: -10,
+						}}
+						onPress={() => {
+							this.props.navigation.navigate('Project');
 						}}
 					>
 						<View style={{ flexDirection: 'row', width: width - 30, paddingRight: 25 }}>
@@ -318,7 +326,7 @@ export default class MyProjects extends React.Component {
 								</View>
 							</View>
 						</View>
-					</View>
+					</TouchableOpacity>
 					<View style={{ marginBottom: '25%' }} />
 				</ScrollView>
 			</View>

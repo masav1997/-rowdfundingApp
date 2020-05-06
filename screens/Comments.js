@@ -36,6 +36,7 @@ export default class Comments extends React.Component {
 						flexDirection: 'row',
 						alignItems: 'flex-end',
 						justifyContent: 'center',
+						padding: 5
 					}}
 				>
 					<TouchableOpacity
@@ -61,8 +62,10 @@ export default class Comments extends React.Component {
 						</Text>
 					</View>
 					<TouchableOpacity
-						style={{ marginTop: '5%', flex: 1, alignSelf: 'flex-end', justifyContent: 'center' }}
-						onPress={() => this.props.navigation.goBack()}
+						style={{ flex: 1, alignSelf: 'flex-end', justifyContent: 'center'}}
+						onPress={() => {
+							this.props.navigation.navigate('CreateTopic');
+						}}
 					>
 						<Image
 							source={require('../assets/icons/add_icon.png')}
@@ -79,6 +82,9 @@ export default class Comments extends React.Component {
 							backgroundColor: 'white',
 							padding: 15,
 							marginBottom: 10,
+						}}
+						onPress={() => {
+							this.props.navigation.navigate('Topic');
 						}}
 					>
 						<View

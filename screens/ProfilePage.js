@@ -125,7 +125,7 @@ export default class ProfilePage extends React.Component {
 						</View>
 					</View>
 
-					<View
+					<TouchableOpacity
 						style={{
 							width: width,
 							height: 'auto',
@@ -134,6 +134,9 @@ export default class ProfilePage extends React.Component {
 							marginTop: 0,
 							alignSelf: 'center',
 							marginBottom: 10,
+						}}
+						onPress={() => {
+							this.props.navigation.navigate('UserProjects');
 						}}
 					>
 						<View style={{ flexDirection: 'row', width: '100%' }}>
@@ -172,7 +175,7 @@ export default class ProfilePage extends React.Component {
 								/>
 							</TouchableOpacity>
 						</View>
-					</View>
+					</TouchableOpacity>
 
 					<View
 						style={{
