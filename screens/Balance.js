@@ -661,6 +661,7 @@ export default class Balance extends React.Component {
 						justifyContent: 'flex-end',
 						position: 'absolute',
 					}}
+					onBackdropPress={this.toggleModal1}
 				>
 					<View
 						style={{
@@ -1168,6 +1169,7 @@ export default class Balance extends React.Component {
 						justifyContent: 'flex-end',
 						position: 'absolute',
 					}}
+					onBackdropPress={this.toggleModal}
 				>
 					<View
 						style={{

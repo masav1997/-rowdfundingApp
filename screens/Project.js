@@ -907,6 +907,7 @@ export default class Project extends React.Component {
 						justifyContent: 'flex-end',
 						position: 'absolute',
 					}}
+					onBackdropPress={this.toggleModal}
 				>
 					<View
 						style={{

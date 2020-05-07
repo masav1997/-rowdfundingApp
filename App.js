@@ -15,6 +15,7 @@ import MyProjects from './screens/MyProjects';
 import AllProjects from './screens/AllProjects';
 import Favorites from './screens/Favorites';
 import Search from './screens/Search';
+import SearchUser from './screens/SearchUser';
 import Project from './screens/Project';
 import Comments from './screens/Comments';
 import CreateTopic from './screens/CreateTopic';
@@ -171,6 +172,7 @@ export default class App extends React.Component {
 					<Stack.Screen name="Balance" component={Balance} />
 					<Stack.Screen name="UserProjects" component={UserProjects} />
 					<Stack.Screen name="Search" component={Search} />
+					<Stack.Screen name="SearchUser" component={SearchUser} />
 					<Stack.Screen name="Project" component={Project} />
 					<Stack.Screen name="Comments" component={Comments} />
 					<Stack.Screen name="CreateTopic" component={CreateTopic} />

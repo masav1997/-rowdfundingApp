@@ -307,6 +307,7 @@ export default class Search extends React.Component {
 						justifyContent: 'flex-end',
 						position: 'absolute',
 					}}
+					onBackdropPress={this.toggleModal}
 				>
 					<ScrollView showsVerticalScrollIndicator={false}>
 						<View

@@ -36,7 +36,7 @@ export default class Comments extends React.Component {
 						flexDirection: 'row',
 						alignItems: 'flex-end',
 						justifyContent: 'center',
-						padding: 5
+						padding: 5,
 					}}
 				>
 					<TouchableOpacity
@@ -62,7 +62,7 @@ export default class Comments extends React.Component {
 						</Text>
 					</View>
 					<TouchableOpacity
-						style={{ flex: 1, alignSelf: 'flex-end', justifyContent: 'center'}}
+						style={{ flex: 1, alignSelf: 'flex-end', justifyContent: 'center' }}
 						onPress={() => {
 							this.props.navigation.navigate('CreateTopic');
 						}}
@@ -75,16 +75,13 @@ export default class Comments extends React.Component {
 				</View>
 
 				<ScrollView showsVerticalScrollIndicator={false}>
-					<TouchableOpacity
+					<View
 						style={{
 							width: '100%',
 							height: 'auto',
 							backgroundColor: 'white',
 							padding: 15,
 							marginBottom: 10,
-						}}
-						onPress={() => {
-							this.props.navigation.navigate('Topic');
 						}}
 					>
 						<View
@@ -101,10 +98,35 @@ export default class Comments extends React.Component {
 									color: '#0C0D0B',
 									fontWeight: '500',
 									textAlign: 'left',
+									flex: 1,
+									alignSelf: 'flex-end',
 								}}
 							>
 								Организационные вопросы
 							</Text>
+							<TouchableOpacity
+								style={{ alignSelf: 'flex-start', height: 20, width: 20, justifyContent: 'center' }}
+							>
+								<Image
+									source={require('../assets/icons/dots.png')}
+									style={{ width: 16, height: 16, alignSelf: 'center' }}
+								/>
+							</TouchableOpacity>
+						</View>
+						<View style={{ flexDirection: 'row', width: '100%', marginTop: 3 }}>
+							<Text
+								style={{
+									fontSize: 13,
+									color: '#BBC5D0',
+									width: 'auto',
+									fontWeight: 'normal',
+									textAlign: 'left',
+									flex: 1,
+								}}
+							>
+								12.02.2020 23:45
+							</Text>
+							<View />
 						</View>
 						<View
 							style={{
@@ -126,19 +148,13 @@ export default class Comments extends React.Component {
 								eu sunt. Veniam laboris adipisicing labore sit ipsum...
 							</Text>
 						</View>
-						<View style={{ flexDirection: 'row', width: '100%', marginTop: 3 }}>
-							<Text
-								style={{
-									fontSize: 13,
-									color: '#BBC5D0',
-									fontWeight: 'normal',
-									textAlign: 'left',
-									marginBottom: 2,
-									flex: 1,
-								}}
-							>
-								154 комментария
-							</Text>
+						<TouchableOpacity style={{ flexDirection: 'row', width: '100%', marginTop: 10 }} onPress={() => {
+							this.props.navigation.navigate('Topic');
+						}}>
+							<Image
+								source={require('../assets/icons/topic.png')}
+								style={{ width: 16, height: 16, marginRight: 5 }}
+							/>
 
 							<Text
 								style={{
@@ -150,12 +166,12 @@ export default class Comments extends React.Component {
 									flex: 1,
 								}}
 							>
-								12.02.2020 23:45
+								154
 							</Text>
 							<View />
-						</View>
-					</TouchableOpacity>
-					<TouchableOpacity
+						</TouchableOpacity>
+					</View>
+					<View
 						style={{
 							width: '100%',
 							height: 'auto',
@@ -178,10 +194,35 @@ export default class Comments extends React.Component {
 									color: '#0C0D0B',
 									fontWeight: '500',
 									textAlign: 'left',
+									flex: 1,
+									alignSelf: 'flex-end',
 								}}
 							>
 								Технические проблемы и уточнения
 							</Text>
+							<TouchableOpacity
+								style={{ alignSelf: 'flex-start', height: 20, width: 20, justifyContent: 'center' }}
+							>
+								<Image
+									source={require('../assets/icons/dots.png')}
+									style={{ width: 16, height: 16, alignSelf: 'center' }}
+								/>
+							</TouchableOpacity>
+						</View>
+						<View style={{ flexDirection: 'row', width: '100%', marginTop: 3 }}>
+							<Text
+								style={{
+									fontSize: 13,
+									color: '#BBC5D0',
+									width: 'auto',
+									fontWeight: 'normal',
+									textAlign: 'left',
+									flex: 1,
+								}}
+							>
+								12.02.2020 23:45
+							</Text>
+							<View />
 						</View>
 						<View
 							style={{
@@ -203,19 +244,13 @@ export default class Comments extends React.Component {
 								eu sunt. Veniam laboris adipisicing labore sit ipsum...
 							</Text>
 						</View>
-						<View style={{ flexDirection: 'row', width: '100%', marginTop: 3 }}>
-							<Text
-								style={{
-									fontSize: 13,
-									color: '#BBC5D0',
-									fontWeight: 'normal',
-									textAlign: 'left',
-									marginBottom: 2,
-									flex: 1,
-								}}
-							>
-								154 комментария
-							</Text>
+						<TouchableOpacity style={{ flexDirection: 'row', width: '100%', marginTop: 10 }} onPress={() => {
+							this.props.navigation.navigate('Topic');
+						}}>
+							<Image
+								source={require('../assets/icons/topic.png')}
+								style={{ width: 16, height: 16, marginRight: 5 }}
+							/>
 
 							<Text
 								style={{
@@ -227,11 +262,11 @@ export default class Comments extends React.Component {
 									flex: 1,
 								}}
 							>
-								12.02.2020 23:45
+								154
 							</Text>
 							<View />
-						</View>
-					</TouchableOpacity>
+						</TouchableOpacity>
+					</View>
 				</ScrollView>
 			</View>
 		);

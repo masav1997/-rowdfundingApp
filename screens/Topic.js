@@ -1,11 +1,21 @@
 import * as React from 'react';
-import { View, Dimensions, StatusBar, Text, Image, TouchableOpacity, TextInput, Switch } from 'react-native';
+import { View, Dimensions, StatusBar, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import ScrollableTabView, { ScrollableTabBar } from 'react-native-scrollable-tab-view-forked';
+
+import AnswerCard from '../components/AnswerCard';
 
 const { width } = Dimensions.get('window');
 
 export default class Topic extends React.Component {
-	state = { switchValue: false, switchValue1: false, switchValue2: false, switchValue3: false };
+	state = {
+		switchValue: false,
+		switchValue1: false,
+		switchValue2: false,
+		switchValue3: false,
+		bool: false,
+		answer: false,
+	};
 
 	toggleSwitch = (value) => {
 		this.setState({ switchValue: value });
@@ -58,7 +68,7 @@ export default class Topic extends React.Component {
 								marginBottom: 5,
 							}}
 						>
-							Комментарии
+							Комментарии к теме
 						</Text>
 					</View>
 					<TouchableOpacity
@@ -84,44 +94,49 @@ export default class Topic extends React.Component {
 							marginBottom: 10,
 						}}
 					>
-						<View style={{ flexDirection: 'row', width: '100%' }}>
-							<Image
-								source={require('../assets/icons/avatar2.png')}
-								style={{ width: 24, height: 24, borderRadius: 24 }}
-							/>
-							<View style={{ flex: 2, alignSelf: 'center' }}>
-								<Text
-									style={{
-										fontSize: 13,
-										color: '#0C0D0B',
-										fontWeight: '500',
-										textAlign: 'left',
-										marginLeft: 5,
-										marginBottom: 2,
-									}}
-								>
-									Company/username
-								</Text>
-							</View>
-							<TouchableOpacity
-								style={{ flex: 2, justifyContent: 'flex-end', flexDirection: 'row' }}
-								onPress={() => {
-									this.props.navigation.navigate('UserProjects');
+						<View
+							style={{
+								flexDirection: 'row',
+								flexWrap: 'wrap',
+								width: '100%',
+								marginTop: 5,
+							}}
+						>
+							<Text
+								style={{
+									fontSize: 17,
+									color: '#0C0D0B',
+									fontWeight: '500',
+									textAlign: 'left',
+									flex: 1,
+									alignSelf: 'flex-end',
 								}}
 							>
-								<Text
-									style={{
-										fontSize: 13,
-										color: '#BBC5D0',
-										fontWeight: 'normal',
-										alignSelf: 'flex-end',
-										marginRight: 10,
-										alignSelf: 'center',
-									}}
-								>
-									18 Янв 2020 23:45
-								</Text>
+								Организационные вопросы
+							</Text>
+							<TouchableOpacity
+								style={{ alignSelf: 'flex-start', height: 20, width: 20, justifyContent: 'center' }}
+							>
+								<Image
+									source={require('../assets/icons/dots.png')}
+									style={{ width: 16, height: 16, alignSelf: 'center' }}
+								/>
 							</TouchableOpacity>
+						</View>
+						<View style={{ flexDirection: 'row', width: '100%', marginTop: 3 }}>
+							<Text
+								style={{
+									fontSize: 13,
+									color: '#BBC5D0',
+									width: 'auto',
+									fontWeight: 'normal',
+									textAlign: 'left',
+									flex: 1,
+								}}
+							>
+								12.02.2020 23:45
+							</Text>
+							<View />
 						</View>
 						<View
 							style={{
@@ -134,87 +149,40 @@ export default class Topic extends React.Component {
 							<Text
 								style={{
 									fontSize: 15,
-									color: '#0C0D0B',
+									color: '#BBC5D0',
 									fontWeight: 'normal',
 									textAlign: 'left',
-									marginLeft: 29,
 								}}
 							>
 								Duis qui exercitation do exercitation occaecat exercitation cillum veniam ad amet magna
 								eu sunt. Veniam laboris adipisicing labore sit ipsum...
 							</Text>
 						</View>
-					</View>
+						<TouchableOpacity
+							style={{ flexDirection: 'row', width: '100%', marginTop: 10 }}
+							onPress={() => {
+								this.props.navigation.navigate('Topic');
+							}}
+						>
+							<Image
+								source={require('../assets/icons/topic.png')}
+								style={{ width: 16, height: 16, marginRight: 5 }}
+							/>
 
-					<View
-						style={{
-							width: '100%',
-							height: 'auto',
-							backgroundColor: 'white',
-							padding: 15,
-							marginBottom: 10,
-						}}
-					>
-						<View style={{ flexDirection: 'row', width: '100%' }}>
-							<Image
-								source={require('../assets/icons/avatar2.png')}
-								style={{ width: 24, height: 24, borderRadius: 24 }}
-							/>
-							<View style={{ flex: 2, alignSelf: 'center' }}>
-								<Text
-									style={{
-										fontSize: 13,
-										color: '#0C0D0B',
-										fontWeight: '500',
-										textAlign: 'left',
-										marginLeft: 5,
-										marginBottom: 2,
-									}}
-								>
-									Company/username
-								</Text>
-							</View>
-							<TouchableOpacity
-								style={{ flex: 2, justifyContent: 'flex-end', flexDirection: 'row' }}
-								onPress={() => {
-									this.props.navigation.navigate('UserProjects');
-								}}
-							>
-								<Text
-									style={{
-										fontSize: 13,
-										color: '#BBC5D0',
-										fontWeight: 'normal',
-										alignSelf: 'flex-end',
-										marginRight: 10,
-										alignSelf: 'center',
-									}}
-								>
-									18 Янв 2020 23:45
-								</Text>
-							</TouchableOpacity>
-						</View>
-						<View
-							style={{
-								flexDirection: 'row',
-								flexWrap: 'wrap',
-								width: '100%',
-								marginTop: 5,
-							}}
-						>
 							<Text
 								style={{
-									fontSize: 15,
-									color: '#0C0D0B',
+									fontSize: 13,
+									color: '#BBC5D0',
+									width: 'auto',
 									fontWeight: 'normal',
 									textAlign: 'left',
-									marginLeft: 29,
+									flex: 1,
 								}}
 							>
-								Duis qui exercitation do exercitation occaecat exercitation cillum veniam ad amet magna
-								eu sunt. Veniam laboris adipisicing labore sit ipsum...
+								528 всего
 							</Text>
-						</View>
+							<View />
+						</TouchableOpacity>
 					</View>
 					<View
 						style={{
@@ -225,81 +193,44 @@ export default class Topic extends React.Component {
 							marginBottom: 10,
 						}}
 					>
-						<View style={{ flexDirection: 'row', width: '100%' }}>
-							<Image
-								source={require('../assets/icons/avatar2.png')}
-								style={{ width: 24, height: 24, borderRadius: 24 }}
-							/>
-							<View style={{ flex: 2, alignSelf: 'center' }}>
-								<Text
-									style={{
-										fontSize: 13,
-										color: '#0C0D0B',
-										fontWeight: '500',
-										textAlign: 'left',
-										marginLeft: 5,
-										marginBottom: 2,
-									}}
-								>
-									Company/username
-								</Text>
-							</View>
-							<TouchableOpacity
-								style={{ flex: 2, justifyContent: 'flex-end', flexDirection: 'row' }}
-								onPress={() => {
-									this.props.navigation.navigate('UserProjects');
-								}}
-							>
-								<Text
-									style={{
-										fontSize: 13,
-										color: '#BBC5D0',
-										fontWeight: 'normal',
-										alignSelf: 'flex-end',
-										marginRight: 10,
-										alignSelf: 'center',
-									}}
-								>
-									18 Янв 2020 23:45
-								</Text>
-							</TouchableOpacity>
-						</View>
-						<View
-							style={{
-								flexDirection: 'row',
-								flexWrap: 'wrap',
-								width: '100%',
-								marginTop: 5,
-							}}
+						<ScrollableTabView
+							renderTabBar={() => (
+								<ScrollableTabBar style={styles.scrollStyle} tabStyle={styles.tabStyle}/>
+							)}
+							tabBarTextStyle={styles.tabBarTextStyle}
+							tabBarInactiveTextColor={'#BBC5D0'}
+							tabBarActiveTextColor={'#2E41BF'}
+							tabBarUnderlineStyle={styles.underlineStyle}
+							tabBarTextStyle={{ fontSize: 17, fontWeight: '500' }}
 						>
-							<View style={{height: 'auto', width: 'auto', padding: 5, backgroundColor: '#05C53B', borderRadius: 5, alignItems: 'center', marginLeft: 29, marginBottom: 5,}}>
-								<Text style={{fontSize: 11, color: 'white'}}>Создатель</Text>
-							</View>
-						</View>
-						<View
-							style={{
-								flexDirection: 'row',
-								flexWrap: 'wrap',
-								width: '100%',
-								marginTop: 5,
-							}}
-						>
-							<Text
-								style={{
-									fontSize: 15,
-									color: '#0C0D0B',
-									fontWeight: 'normal',
-									textAlign: 'left',
-									marginLeft: 29,
-								}}
-							>
-								Duis qui exercitation do exercitation occaecat exercitation cillum veniam ad amet magna
-								eu sunt. Veniam laboris adipisicing labore sit ipsum...
-							</Text>
-						</View>
+							<AnswerCard key={'1'} tabLabel={'Все комментарии'}  onPress={() => {
+									this.props.navigation.navigate('SearchUser');
+								}}/>
+							<AnswerCard key={'2'} tabLabel={'Автора'} onPress={() => {
+									this.props.navigation.navigate('SearchUser');
+								}}/>
+						</ScrollableTabView>
 					</View>
 				</ScrollView>
 			</View>
 		);
 	}
 }
+
+const styles = StyleSheet.create({
+	tabStyle: {},
+	scrollStyle: {
+		backgroundColor: 'white',
+		marginBottom: 10,
+	},
+	tabBarTextStyle: {
+		fontSize: 14,
+		fontWeight: 'normal',
+
+	},
+	underlineStyle: {
+		height: 2.5,
+		backgroundColor: '#2E41BF',
+		borderRadius: 3,
+	},
+});

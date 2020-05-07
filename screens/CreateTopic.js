@@ -5,7 +5,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 const { width } = Dimensions.get('window');
 
 export default class CreateTopic extends React.Component {
-	state = { switchValue: false, switchValue1: false, switchValue2: false, switchValue3: false };
+	state = { switchValue: false, switchValue1: false, switchValue2: false, switchValue3: false, bool: false };
 
 	toggleSwitch = (value) => {
 		this.setState({ switchValue: value });
@@ -21,6 +21,10 @@ export default class CreateTopic extends React.Component {
 
 	toggleSwitch3 = (value) => {
 		this.setState({ switchValue3: value });
+	};
+
+	toggleAttach = () => {
+		this.setState({ bool: !this.state.bool });
 	};
 
 	render() {
@@ -110,6 +114,61 @@ export default class CreateTopic extends React.Component {
 							placeholder="Первый комментарий"
 						/>
 					</View>
+					{this.state.bool ? (
+						<TouchableOpacity
+							style={{
+								flexDirection: 'row',
+								width: '100%',
+								flex: 1,
+								justifyContent: 'flex-start',
+								alignItems: 'center',
+								marginTop: 10,
+							}}
+							onPress={this.toggleAttach}
+						>
+							<Image
+								source={require('../assets/icons/avatar6.png')}
+								style={{ width: 40, height: 40, marginRight: 5, borderRadius: 5 }}
+							/>
+							<Text
+								style={{
+									fontSize: 13,
+									color: '#EE3E54',
+									fontWeight: '500',
+									textAlign: 'center',
+								}}
+							>
+								Удалить фото
+							</Text>
+						</TouchableOpacity>
+					) : (
+						<TouchableOpacity
+							style={{
+								flexDirection: 'row',
+								width: '100%',
+								flex: 1,
+								justifyContent: 'flex-start',
+								alignItems: 'center',
+								marginTop: 20,
+							}}
+							onPress={this.toggleAttach}
+						>
+							<Image
+								source={require('../assets/icons/attach.png')}
+								style={{ width: 20, height: 20, marginRight: 5 }}
+							/>
+							<Text
+								style={{
+									fontSize: 13,
+									color: '#5238F2',
+									fontWeight: '500',
+									textAlign: 'center',
+								}}
+							>
+								Прикрепить фото
+							</Text>
+						</TouchableOpacity>
+					)}
 				</ScrollView>
 				<View
 					style={{
@@ -118,7 +177,7 @@ export default class CreateTopic extends React.Component {
 						flex: 1,
 						justifyContent: 'center',
 						marginTop: 20,
-						marginBottom: 20
+						marginBottom: 20,
 					}}
 				>
 					<TouchableOpacity

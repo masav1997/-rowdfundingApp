@@ -525,6 +525,7 @@ export default class ProfileEdit extends React.Component {
 						justifyContent: 'flex-end',
 						position: 'absolute',
 					}}
+					onBackdropPress={this.toggleModal}
 				>
 					<View
 						style={{
