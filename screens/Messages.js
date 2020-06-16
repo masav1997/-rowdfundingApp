@@ -31,6 +31,7 @@ export default class Messages extends React.Component {
 							title="Технические проблемы и уточнения"
 							description="Натуральносухая куртка от Вули - создана без..."
 							message="15 новых сообщений"
+							onPress={()=>this.props.navigation.navigate('Topic')}
 						/>
 						<MessageCard
 							image={require('../assets/icons/pic2.png')}
@@ -38,6 +39,7 @@ export default class Messages extends React.Component {
 							title="Организационные вопросы"
 							description="Натуральносухая куртка от Вули - создана без..."
 							message="8 новых сообщений"
+							onPress={()=>this.props.navigation.navigate('Topic')}
 						/>
 						<MessageCard
 							image={require('../assets/icons/pic3.png')}
@@ -45,6 +47,7 @@ export default class Messages extends React.Component {
 							title="Технические проблемы и уточнения"
 							description="Натуральносухая куртка от Вули - создана без..."
 							message="6 новых сообщений"
+							onPress={()=>this.props.navigation.navigate('Topic')}
 						/>
 						<MessageCard
 							image={require('../assets/icons/pic4.png')}
@@ -52,6 +55,7 @@ export default class Messages extends React.Component {
 							title="Организационные вопросы"
 							description="Натуральносухая куртка от Вули - создана без..."
 							message="4 новых сообщений"
+							onPress={()=>this.props.navigation.navigate('Topic')}
 						/>
 						<MessageCard
 							image={require('../assets/icons/pic5.png')}
@@ -59,6 +63,7 @@ export default class Messages extends React.Component {
 							title="Технические проблемы и уточнения"
 							description="Натуральносухая куртка от Вули - создана без..."
 							message="32 новых сообщений"
+							onPress={()=>this.props.navigation.navigate('Topic')}
 						/>
 						<View style={{marginBottom: '25%'}}/>
 				</ScrollView>

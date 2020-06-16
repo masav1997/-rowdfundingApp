@@ -1,8 +1,5 @@
 import * as React from 'react';
-import { View, Dimensions, StatusBar, Text, Image, TouchableOpacity, TextInput, Switch } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-
-const { width } = Dimensions.get('window');
+import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native';
 
 export default class AnswerCard extends React.Component {
 	state = {
@@ -31,98 +28,6 @@ export default class AnswerCard extends React.Component {
 	};
 	render() {
 		const { onPress } = this.props;
-		const viewStyle = {
-			width: width - 30,
-			height: 'auto',
-			padding: 10,
-			borderWidth: 1.5,
-			borderColor: '#EFF4FC',
-			borderRadius: 10,
-			marginTop: 15,
-			marginBottom: -10,
-		};
-
-		const viewStyle1 = {
-			flex: 1,
-			alignItems: 'center',
-			justifyContent: 'center',
-			alignSelf: 'flex-start',
-			top: '10%',
-		};
-
-		const textStyle = {
-			fontWeight: 'bold',
-			fontSize: 9,
-			textAlign: 'center',
-		};
-
-		const batteryStyle = {
-			width: 32,
-			height: 10,
-			borderRadius: 2,
-			borderColor: '#000',
-			borderWidth: 0.5,
-			alignItems: 'flex-start',
-			justifyContent: 'center',
-			padding: 1,
-		};
-
-		const batteryStyle1 = {
-			width: '95%',
-			height: 6,
-			backgroundColor: '#000',
-		};
-
-		const viewStyle2 = {
-			flex: 3,
-			alignItems: 'center',
-			justifyContent: 'center',
-		};
-
-		const viewStyle3 = {
-			flexDirection: 'row',
-			width: width,
-			height: 'auto',
-			justifyContent: 'center',
-			alignItems: 'center',
-			paddingHorizontal: 30,
-			marginTop: -20,
-		};
-
-		const viewStyle4 = {
-			flex: 1,
-			alignItems: 'center',
-			justifyContent: 'center',
-			alignSelf: 'center',
-		};
-
-		const viewStyle5 = {
-			flexDirection: 'row',
-			width: width,
-			height: 'auto',
-			justifyContent: 'center',
-			alignItems: 'center',
-			paddingHorizontal: 30,
-			marginTop: 5,
-		};
-
-		const viewStyle6 = {
-			flexDirection: 'row',
-			width: width,
-			height: 'auto',
-			justifyContent: 'center',
-			alignItems: 'center',
-			paddingHorizontal: 30,
-			marginTop: 10,
-		};
-
-		const viewStyle7 = {
-			flex: 1,
-			alignItems: 'center',
-			justifyContent: 'center',
-			alignSelf: 'center',
-			marginBottom: 10,
-		};
 		return (
 			<View style={{ width: '90%' }}>
 				<View

@@ -5,7 +5,7 @@ import ScrollableTabView, { ScrollableTabBar } from 'react-native-scrollable-tab
 
 import AnswerCard from '../components/AnswerCard';
 
-const { width } = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 export default class Topic extends React.Component {
 	state = {
@@ -186,8 +186,8 @@ export default class Topic extends React.Component {
 					</View>
 					<View
 						style={{
-							width: '100%',
-							height: 'auto',
+							width: width+width/7,
+							height: height,
 							backgroundColor: 'white',
 							padding: 15,
 							marginBottom: 10,
